@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<link href="css/Gears.css" rel="stylesheet">
+<meta charset="utf-8">
+<title>Question1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+ 		<h1>What are gears used for?</h1><br>
+		 <a href="Question2.html">What are ratios?</a><br><br>
+ 		<h3 id="hint">Hint: Hover over the image below to find out!</h3>
+ 		<img onmouseenter="showAnswer()" id="woodenGears" src="img/woodenGears.jpg"/>
+ 		<img onmouseleave="hideAnswer()" id="gearUses" src="img/gearUses.jpg" />
+ 	<div id="answer"></div>  <!-- This is a placeholder to display the answer-->
+ 
+</div> <!-- closing  “wrapper” -->
+
+	
+	<script>
+ 		function showAnswer() {
+	   $("#woodenGears").hide();
+	   $("#gearUses").show();
+	   $("#answer").html("<h2>Gears are in almost everything!</h2>");
+	}
+
+		function hideAnswer() {
+	   $("#woodenGears").show();
+	   $("#gearUses").hide();
+	   $("#answer").html("");  
+	}
+	</script>
+
+</body>
+</html>

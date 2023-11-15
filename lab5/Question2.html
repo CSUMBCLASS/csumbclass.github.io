@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Question2</title>
+	<link href="css/Gears.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	
+  <div id="wrapper">
+	 
+	<h1>What are ratios?</h1><br>
+	   <a href="question1.html">Go Back: What are gears used for?</a><br><br>
+	<h2>Click on one of the following choices:</h2><br>
+
+	<h2 onclick="wrongAnswer1()" class="choices"> Difficult to answer questions. </h2>
+	<h2 onclick="rightAnswer()" class="choices">  Ratio tells us how much of one thing there is in relation to another thing. </h2>
+	<h2 onclick="wrongAnswer2()" class="choices"> The best kind of steak. </h2>
+	<h2 onclick="wrongAnswer3()" class="choices"> A programming language used to program computers in 1960's. </h2>
+	  
+  	<div id="feedback"></div>
+	<img id="goldenRatio" src="img/goldenRatio.jpg" />
+
+	
+	
+	</div>
+	<script>
+      	function rightAnswer(){
+         $("#feedback").html("<h2 style='color:green'> Correct! Ratios help us see relations between amounts. The image below represents what is known as the Golden Ratio.</h2>");
+         $("#goldenRatio").show();
+      }
+		
+		function wrongAnswer1(){
+      	 $("#feedback").html("<h2 style='color:red'> Ratios are a way to show how amounts are related! </h2>");
+      	 $("#goldenRatio").hide();
+   }
+   		function wrongAnswer2(){
+      	 $("#feedback").html("<h2 style='color:red'> Ratios are not a type of steak. </h2>");
+      	 $("#goldenRatio").hide();
+   }
+		function wrongAnswer3(){
+      	 $("#feedback").html("<h2 style='color:red'> Ratios are not a programming language. </h2>");
+      	 $("#goldenRatio").hide();
+   }
+
+
+		
+   	</script>
+
+	
+</body>
+</html>
